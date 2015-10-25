@@ -1,0 +1,38 @@
+@@ -0,0 +1,36 @@
+
+import java.util.*;
+
+class ShiftCipherApp
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int shift;
+        String message;
+
+        System.out.println("Shift Cipher Algorithm");
+        System.out.println("===========================");
+        System.out.print("How many shifts you want to use? ");
+        try {
+            shift = sc.nextInt();
+            sc.nextLine(); 
+        } catch (Exception e) {
+            System.out.println("That is not an integer. Please try again.");
+            System.exit(0);
+            return;
+        }
+        System.out.println("Please enter a message you want to encrypt.");
+        message = sc.nextLine();
+        sc.close();
+
+        
+        ShiftCipher app = new ShiftCipher(message, shift);
+        app.cipher();
+        System.out.println("Encrypted: " + app.getCiphered());
+
+        
+        app.decipher();
+        System.out.println("Decrypted: " + app.getDeciphered());
+    }
+}
+\ No newline at end of file
