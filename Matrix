@@ -1,0 +1,39 @@
+@@ -0,0 +1,39 @@
+
+
+class Matrix {
+    
+    final int size = 4;
+    private int[][] squares = new int [size][size];
+    
+      
+            public void addMatrices(Matrix a, Matrix b){
+                int a,b;
+
+                for(a = 0; a<size ;a++){
+                    for(b = 0; b<size; b++ ){
+                        squares[a][b]=a.getCell(a, b) + b.getCell(a, b);
+                    }       
+                }   
+            }
+            
+             public int getCell(int a, int b) {
+             return squares[a][b];
+             }
+             
+            public void setCell(int a, int b, int value) {
+                this.squares[a][b] = value;   
+            }
+            
+            
+            public void displayMatrix() {
+                int a,b;
+                for(a=0; a<size; a++) {
+                    for(b=0; b<size; b++) {
+                        System.out.print(this.getCell(a,b) + "\t") ;
+                    }
+                   System.out.println() ;
+                }
+                
+        }
+}
