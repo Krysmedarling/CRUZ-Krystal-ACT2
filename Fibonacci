@@ -1,0 +1,29 @@
+@@ -0,0 +1,29 @@
+import java.util.*;
+
+public class Fibonacci {
+
+    public static void main(String args[]) {
+    
+        
+        System.out.println ("Please enter a number: ") ;
+        int num = new Scanner(System.in).nextInt() ;
+        System.out.println ("Fibonacci upto " + num +" numbers : ") ;
+       
+        for(int a=1; a<=num; a++) {
+           
+		 System.out.println (fibonacci(a) +", ") ;
+        }
+    } 
+  
+
+  
+   	public static int fibonacci(int num){
+        
+		if(num <= 2){
+                  return 1 ;
+        }
+
+        return fibonacci(num-1) + fibonacci(num -2) ; 
+    }
+}
